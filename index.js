@@ -31,9 +31,8 @@ let passengerId = 0;
 class Passenger {
 
   constructor(name){
-    this.name = name;
-    this.id = ++passengerId;
-
+   this.id = ++passengerId;
+   this.name = name;
     store.passengers.push(this);
   }
 
