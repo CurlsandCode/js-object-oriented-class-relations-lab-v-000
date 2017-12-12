@@ -4,7 +4,7 @@ let driverId = 0;
 
 class Driver {
   constructor(name){
-    this.id = ++driverId
+    this.id = ++driverId;
     this.name = name;
 
     store.drivers.push(this);
@@ -21,10 +21,11 @@ class Driver {
      })
 }
 
-let passengerId = 0
+let passengerId = 0;
+
 class Passenger {
   constructor(name){
-    this.id = ++passengerId
+    this.id = ++passengerId;
     this.name = name;
 
     store.passengers.push(this)
@@ -41,30 +42,28 @@ class Passenger {
     })
 }
 
-let tripId = 0
+let tripId = 0;
+
 class Trip {
   constructor(driver, passenger){
-    this.id = ++tripId
+    this.id = ++tripId;
     if(driver){
-      this.driverId = driver.id
+      this.driverId = driver.id;
     }
     if(passenger){
-      this.passengerId = passenger.id
+      this.passengerId = passenger.id;
     }
      store.trips.push(this)
   }
-  setDriver(driver){
-   this.driverId = driver.id
- }
- setPassenger(passenger){
-   this.passengerId = passenger.id
- }
+  
     driver(){
     return store.drivers.find(function(driver){
       return driver.id === this.driverId;
     }.bind(this))
+  }
     passenger(){
     return store.passengers.find(function(passenger){
       return passsenger.id === this.passengerId;
     }.bind(this))
+  }
 }
