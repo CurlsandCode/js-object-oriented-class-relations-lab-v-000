@@ -19,22 +19,5 @@ class Passenger {
     store.passengers.push(this)
   }
 }
-let tripId = 0
-class Trip {
-  constructor(driver, passenger){
-    this.id = ++tripId
-    if(driver){
-      this.driverId = driver.id
-    }
-    if(passenger){
-      this.passengerId = passenger.id
-    }
-     store.trips.push(this)
-  }
-  setDriver(driver){
-   this.driverId = driver.id
- }
- setPassenger(passenger){
-   this.passengerId = passenger.id
- }
-}
+
+
