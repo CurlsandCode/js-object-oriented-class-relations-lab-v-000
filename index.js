@@ -1,4 +1,4 @@
-let store = {drivers:[], passengers:[], trip:[]}
+let store = {drivers:[], passengers:[]}
 
 let driverId = 0
 class Driver {
@@ -39,4 +39,3 @@ class Passenger {
       return trip.driver();
     })
 }
-
