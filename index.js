@@ -19,10 +19,10 @@ class Passenger {
     store.passengers.push(this)
   }
 }
-let tripsId = 0
+let tripId = 0
 class Trip {
   constructor(driver, passenger){
-    this.id = ++TripId
+    this.id = ++tripId
     if(driver){
       this.driverId = driver.id
     }
